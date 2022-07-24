@@ -1,0 +1,15 @@
+{
+    "OWNER_ID": "678402714765361182",
+    "LOGS": {
+        "CHANNEL_ID": "976044564592857099",
+        "MESSAGE": "ERROR",
+        "TAG": "<@678402714765361182>"
+    },
+    "DATE": {
+        "ENABLE": "true",
+        "CHANNEL_ID": "1000618492841697350",
+        "TIMEZONE": "Asia/Kolkata",
+        "FORMATDate": "DD MMMM YYYY",
+        "UPDATE_INTERVAL": "600000"
+    }
+}
