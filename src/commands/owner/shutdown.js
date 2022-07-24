@@ -16,14 +16,14 @@ module.exports = {
             { name: "User", value: `<@!${interaction.user.id}>`},
             { name: "Channel"}
         )
-        client.channels.cache.get(client.config.LOGS.CHANNEL_ID).send({ embeds: [logEmbed]});
+        await client.channels.cache.get(client.config.LOGS.CHANNEL_ID).send({ embeds: [logEmbed]});
     
         //Command Code
         try {
             if (interaction.user.id != client.config.OWNER_ID) {
-                return interaction.reply({ content: "This command is for developers", ephemeral: true });
+                return await interaction.reply({ content: "This command is for developers", ephemeral: true });
             }
-            interaction.reply({ content: "Shutting down bot Now!" }).then((m) => {
+            await interaction.reply({ content: "Shutting down bot Now!" }).then((m) => {
                 client.destroy();
             });
 
@@ -38,7 +38,7 @@ module.exports = {
                 { name: "User", value: `<@!${interaction.user.id}>`},
                 { name: "Channel", value: `<#${interaction.channel.id}>`}
             )
-            client.channels.cache.get(client.config.LOGS.CHANNEL_ID).send({ content: `${errTag}`, embeds: [errEmbed] });
+            await client.channels.cache.get(client.config.LOGS.CHANNEL_ID).send({ content: `${errTag}`, embeds: [errEmbed] });
         }
     }
 }

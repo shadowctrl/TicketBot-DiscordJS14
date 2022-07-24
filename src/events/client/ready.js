@@ -20,10 +20,10 @@ module.exports = {
         ];
         console.log('Developed For EliteX Rp <3');
 
-        setInterval(() => {
+        setInterval(async () => {
             const randomIndex = Math.floor(Math.random() * (activities.length - 1) + 1);
             const newActivity = activities[randomIndex];
-            client.user.setActivity(newActivity,{ type : "PLAYING"});
+            client.user.setPresence({ activities: [{ name: newActivity }], status: 'dnd' });
         }, 5000);
 
         const needDatenTime = client.config.DATE.ENABLE;
